@@ -15,6 +15,11 @@ Winwheel.js Features Include:
 * Fully commented source code. Plenty of tutorials and other documentation.
 * Winwheel.js is free to use with an open source licence.
 
+## Via NPM
+```
+npm install winwheel --save
+```
+
 ## Example
 ```javascript
 var myWheel = new Winwheel({
