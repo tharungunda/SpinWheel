@@ -520,7 +520,7 @@ Winwheel.prototype.drawWheelImage = function()
         this.ctx.rotate(this.degToRad(this.rotationAngle));
         this.ctx.translate(-this.centerX, -this.centerY);
 
-        this.ctx.drawImage(this.wheelImage, imageLeft, imageTop);
+        this.ctx.drawImage(this.wheelImage, imageLeft, imageTop, this.wheelImage.width, this.wheelImage.height);
 
         this.ctx.restore();
     }
