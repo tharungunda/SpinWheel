@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Wheel</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h3>Çark Ayarları</h3>
+                    <br>
+                    <div class="form-group">
+                        <label for="type">Çark Tipi</label>
+                        <select class="form-control" name="type" id="type">
+                            <option value="manuel">Manuel</option>
+                            <option value="auto">Otomatik</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="repeataftertime">Otomatik Tekrar Zamanlaması (sn)</label>
+                        <input type="number" class="form-control" id="repeataftertime" value="10" />
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Hız Kademesi</label>
+                        <select class="form-control" name="speed" id="speed">
+                            <option selected value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="start">Başlat</button>
+                    <button class="btn btn-success" id="reset">Sıfırla ve Durdur</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h3>Alan Ayarları</h3>
+                    <br>
+                    <div class="form-group" id="fieldscontainer">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="field" aria-label="Checkbox for following text input">
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="fieldvalue"
+                                aria-label="Text input with checkbox">
+                        </div>
+                    </div>
+                    <button class="btn btn-success" id="addfield">Alan Ekle</button>
+                    <button class="btn btn-success" id="setfield">Çarka Uygula</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div align="center">
+        <h2 id="wheelSelectionResult"></h2>
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="438" height="582" class="the_wheel" align="center" valign="center">
+                    <canvas id="canvas" width="434" height="434">
+                        <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try
+                            another.</p>
+                    </canvas>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./js/Wheel.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
