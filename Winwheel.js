@@ -1929,22 +1929,23 @@ Winwheel.prototype.getRandomForSegment = function(segmentNumber)
 {
     let stopAngle = 0;
 
-    if (segmentNumber) {
-        if (typeof this.segments[segmentNumber] !== 'undefined') {
-            let startAngle = this.segments[segmentNumber].startAngle;
-            let endAngle = this.segments[segmentNumber].endAngle;
-            let range = (endAngle - startAngle) - 2;
+    if (!segmentNumber) {
+        console.log('Segment number not specified, use 0 as a fallback value');
+        segmentNumber = 0;
+    }
 
-            if (range > 0) {
-                stopAngle = (startAngle + 1 + Math.floor((Math.random() * range)));
-            } else {
-               console.log('Segment size is too small to safely get random angle inside it');
-            }
+    if (typeof this.segments[segmentNumber] !== 'undefined') {
+        let startAngle = this.segments[segmentNumber].startAngle;
+        let endAngle = this.segments[segmentNumber].endAngle;
+        let range = (endAngle - startAngle) - 2;
+
+        if (range > 0) {
+            stopAngle = (startAngle + 1 + Math.floor((Math.random() * range)));
         } else {
-            console.log('Segment ' + segmentNumber + ' undefined');
+           console.log('Segment size is too small to safely get random angle inside it');
         }
     } else {
-        console.log('Segment number not specified');
+        console.log('Segment ' + segmentNumber + ' undefined');
     }
 
     return stopAngle;
