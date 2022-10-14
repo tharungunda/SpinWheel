@@ -54,3 +54,4 @@ So this means if you would like a version of Winwheel.js for your current JavaSc
 to create it. If you create one perhaps open an Issue with the details so others can find and use it. Thanks.
 
 You are welcome to ask questions using the Issues feature of Github, but please don't be offended if I take quite a long time to respond to them. To be honest its probably quicker to ask the Stackoverflow community for help https://stackoverflow.com/search?tab=newest&q=Winwheel
+# amplify_test_001
